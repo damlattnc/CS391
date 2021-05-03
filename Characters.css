@@ -1,0 +1,31 @@
+.split {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+}
+
+.left {
+    width: 20%;
+    left: 0;
+    background-image: url("wood.jpg");
+}
+
+.right {
+    width: 80%;
+    right: 0;
+    background-image: url("parchment.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.characterTop {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.basicData {
+    text-align: center;
+    padding-top: 10px;
+}

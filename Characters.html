@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Characters</title>
+  <link href="Characters.css" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+  <div class="split left">
+    <p>placeholder</p>
+  </div>
+
+  <div class="split right">
+    <form method="post" action="http://localhost:3000/character">
+      <div class="characterTop">
+        <input type="text" placeholder="Enter your character name" name="characterName">
+      </div>
+      <div class="basicData">
+        <label for="level">Level: </label>
+        <input type="number" id="level" name="level">
+
+        <label for="cRaces">Race: </label>
+        <select name="cRaces" multiple>
+          <option value="1" selected>Human</option>
+          <option value="2">Dragonborn</option>
+          <option value="3">Dwarf</option>
+          <option value="4">Elf</option>
+          <option value="5">Gnome</option>
+          <option value="6">Half-Elf</option>
+          <option value="7">Halfling</option>
+          <option value="8">Half-Orc</option>
+          <option value="9">Tiefling</option>
+        </select>
+
+        <label for="class">Class: </label>
+        <select name="class" multiple>
+          <option value="1" selected>Fighter</option>
+          <option value="2">Barbarian</option>
+          <option value="3">Bard</option>
+          <option value="4">Cleric</option>
+          <option value="5">Druid</option>
+          <option value="6">Monk</option>
+          <option value="7">Paladin</option>
+          <option value="8">Ranger</option>
+          <option value="9">Rogue</option>
+          <option value="10">Sorcerer</option>
+          <option value="11">Warlock</option>
+          <option value="12">Wizard</option>
+          <option value="13">Artificer</option>
+          <option value="14">Homebrew</option>
+        </select>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
