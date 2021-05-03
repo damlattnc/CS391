@@ -4,7 +4,6 @@ html {
 
 body {
     background-image: url("tavern.jpg");
-    background-color: #cccccc;
     font-family: "Trebuchet MS";
 }
 
@@ -12,7 +11,6 @@ body {
     border-radius: 25px;
     display: table;
     background-image: url("papyrus.jpg");
-    background-color: #cccccc;
     margin: 0;
     position: absolute;
     top: 50%;
