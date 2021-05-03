@@ -3,39 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link href="LoginScreen.css" rel="stylesheet">
+    <script src="LoginScreen.js"></script>
 </head>
-<style>
 
-    body {
-        background-image: url("tavern.jpg");
-        background-color: #cccccc;
-        font-family: "Trebuchet MS";
-    }
-
-    .parentContainer {
-        border-radius: 25px;
-        display: table;
-        background-image: url("papyrus.jpg");
-        background-color: #cccccc;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-
-    .loginContainer {
-        display: table-cell;
-        vertical-align: middle;
-        padding: 10px;
-    }
-
-    .buttonContainer {
-        float: right;
-    }
-
-</style>
 <body>
     <form method="post" action="http://localhost:3000/accounts">
         <div class="parentContainer">
@@ -54,5 +25,6 @@
             </div>
         </div>
     </form>
+    
 </body>
 </html>
