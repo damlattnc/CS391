@@ -8,7 +8,17 @@
 <body>
 <div class="main">
   <div class="split left">
-    <p>placeholder</p>
+    <div class="chars">
+      <button type="button">+</button>
+    </div>
+    <div class="bottomOptions">
+      <div class="bottomOptions l">
+        <a href ="http://localhost:3000/LoginScreen">Log Out</a>
+      </div>
+      <div class="bottomOptions r">
+        <a href ="http://localhost:3000/DiceRoll">Roll a Die</a>
+      </div>
+    </div>
   </div>
 
   <div class="split right">
@@ -52,7 +62,7 @@
         </select>
       </div>
       <div class="secondDataRow">
-        <label for="alignment">Alignment: </label> <br>
+        <label for="alignment">Alignment: </label>
         <select name="alignment" multiple>
           <option value="1" selected>Lawful Good</option>
           <option value="2" selected>Neutral Good</option>
@@ -64,6 +74,58 @@
           <option value="8" selected>Neutral Evil</option>
           <option value="9" selected>Chaotic Evil</option>
         </select>
+
+        <label for="bio">Character Bio: </label>
+        <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
+      </div>
+      <div class="thirdData">
+        <div class="thirdData l">
+          <p>Inventory</p>
+        </div>
+        <div class="thirdData r">
+          <p>Attributes</p>
+        </div>
+      </div>
+      <div class="fourthData">
+        <div class="fourthData l">
+          <textarea id="inventory" name="inventory" rows="8" cols="50"></textarea>
+        </div>
+        <div class="fourthData r">
+          <div class="att">
+            <div class="att l">
+              <label for="strength">Strength</label> <br>
+              <label for="dexterity">Dexterity</label> <br>
+              <label for="constitution">Constitution</label> <br>
+              <label for="intelligence">Intelligence</label> <br>
+              <label for="wisdom">Wisdom</label> <br>
+              <label for="charisma">Charisma</label> <br>
+            </div>
+            <div class="att r">
+              <input type="number" id="strength" name="strength"> <br>
+              <input type="number" id="dexterity" name="dexterity"> <br>
+              <input type="number" id="constitution" name="constitution"> <br>
+              <input type="number" id="intelligence" name="intelligence"> <br>
+              <input type="number" id="wisdom" name="wisdom"> <br>
+              <input type="number" id="charisma" name="charisma"> <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fifthData">
+        <div class="fifthData l">
+          <label for="healthDamage">Health & Damage</label> <br>
+        </div>
+        <div class="fifthData r">
+          <label for="skills">Skills</label> <br>
+        </div>
+      </div>
+      <div class="sixthData">
+        <div class="sixthData l">
+          <textarea id="healthDamage" name="healthDamage" rows="10" cols="50"></textarea>
+        </div>
+        <div class="sixthData r">
+          <textarea id="skills" name="skills" rows="10" cols="50"></textarea>
+        </div>
       </div>
     </form>
   </div>

@@ -34,3 +34,46 @@
     text-align: center;
     padding-top: 10px;
 }
+
+textarea {
+    resize: none;
+}
+
+.thirdData {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.l {
+    width: 50%;
+    float: left;
+}
+
+.r {
+    width: 50%;
+    float: right;
+}
+
+.fourthData {
+    text-align: center;
+}
+
+.fifthData {
+    text-align: center;
+}
+
+.sixthData {
+    text-align: center;
+}
+
+.bottomOptions {
+    position: fixed;
+    padding-bottom: 10px;
+    bottom: 0;
+}
+
+.chars {
+    position: absolute;
+    padding-top: 100px;
+    left: 50%;
+}
