@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Roll a Die</title>
+    <link href="DiceRoll.css" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+  <div class="split left">
+    <div class="chars">
+      <button type="button">+</button>
+    </div>
+    <div class="bottomOptions">
+      <div class="bottomOptions l">
+        <a href ="http://localhost:3000/LoginScreen">Log Out</a>
+      </div>
+      <div class="bottomOptions r">
+        <a href ="http://localhost:3000/DiceRoll">Roll a Die</a>
+      </div>
+    </div>
+  </div>
+  <div class="split right">
+    <form method="post" action="http://localhost:3000/dice">
+      <label for="maxDice">How many faces does your die have?</label> <br>
+      <input type="number" id="maxDice" name="maxDice"> <br>
+      <button type="button">Roll</button>
+    </form>
+    <p>0</p>
+  </div>
+</div>
+</body>
+</html>

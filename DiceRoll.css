@@ -1,0 +1,38 @@
+.split {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+}
+
+.left {
+    width: 20%;
+    left: 0;
+    background-image: url("wood.jpg");
+}
+
+.right {
+    width: 80%;
+    right: 0;
+    background-image: url("parchment.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.bottomOptions {
+    position: fixed;
+    padding-bottom: 10px;
+    bottom: 0;
+}
+
+.chars {
+    position: absolute;
+    padding-top: 100px;
+    left: 50%;
+}
+
+.main {
+    text-align: center;
+}
