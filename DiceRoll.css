@@ -27,6 +27,16 @@
     bottom: 0;
 }
 
+.l {
+    width: 50%;
+    float: left;
+}
+
+.r {
+    width: 50%;
+    float: right;
+}
+
 .chars {
     position: absolute;
     padding-top: 100px;
