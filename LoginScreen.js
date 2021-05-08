@@ -10,11 +10,11 @@ function check() {
     var storedName = localStorage.getItem('username').value;
     var storedPassword = localStorage.getItem('password').value;
     var userName = document.getElementById('registeredUser').value;
-    var userPassword = document.getElementById('registeredPW').value;
+    var userPassword = document.getElementById('registeredPw').value;
 
-    if(userName.value == storedName && userPassword.value == storedPassword) {
-        alert('You are loged in.');
-        window.location.href = 'Characters.html'
+    if(userName.value == storedName && userPassword.value == storedPassword) {    
+        window.location.href = 'Characters.html' 
+        alert('You are logged in.');
     }
     else {
         alert('ERROR.');
