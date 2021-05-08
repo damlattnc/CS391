@@ -1,134 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Characters</title>
   <link href="Characters.css" rel="stylesheet">
+  <script src="Characters.js"></script>
+  <script src="/path/to/jquery.js"></script> 
+
 </head>
+
 <body>
-<div class="main">
-  <div class="split left">
-    <div class="chars">
-      <button type="button">+</button>
-    </div>
-    <div class="bottomOptions">
-      <div class="l">
-        <input type="button" value="Log Out" onClick="location.href='LoginScreen.html'"></button>
+  <div class="main">
+    <div class="split left">
+      <div class="chars">
+        <input type='file' />
+        <br><img id="myImg" src="#">
       </div>
-      <div class="r">
-        <input type="button" value="Roll a Die" onClick="location.href='DiceRoll.html'"></button>
-      </div>
-    </div>
-  </div>
-
-  <div class="split right">
-    <form method="post" action="http://localhost:3000/character">
-      <div class="characterTop">
-        <input type="text" placeholder="Enter your character name" name="characterName">
-      </div>
-      <div class="basicData">
-        <label for="level">Level: </label>
-        <input type="number" id="level" name="level">
-
-        <label for="cRaces">Race: </label>
-        <select name="cRaces" multiple>
-          <option value="1" selected>Human</option>
-          <option value="2">Dragonborn</option>
-          <option value="3">Dwarf</option>
-          <option value="4">Elf</option>
-          <option value="5">Gnome</option>
-          <option value="6">Half-Elf</option>
-          <option value="7">Halfling</option>
-          <option value="8">Half-Orc</option>
-          <option value="9">Tiefling</option>
-        </select>
-
-        <label for="class">Class: </label>
-        <select name="class" multiple>
-          <option value="1" selected>Fighter</option>
-          <option value="2">Barbarian</option>
-          <option value="3">Bard</option>
-          <option value="4">Cleric</option>
-          <option value="5">Druid</option>
-          <option value="6">Monk</option>
-          <option value="7">Paladin</option>
-          <option value="8">Ranger</option>
-          <option value="9">Rogue</option>
-          <option value="10">Sorcerer</option>
-          <option value="11">Warlock</option>
-          <option value="12">Wizard</option>
-          <option value="13">Artificer</option>
-          <option value="14">Homebrew</option>
-        </select>
-      </div>
-      <div class="secondDataRow">
-        <label for="alignment">Alignment: </label>
-        <select name="alignment" multiple>
-          <option value="1" selected>Lawful Good</option>
-          <option value="2" selected>Neutral Good</option>
-          <option value="3" selected>Chaotic Good</option>
-          <option value="4" selected>Lawful Neutral</option>
-          <option value="5" selected>True Neutral</option>
-          <option value="6" selected>Chaotic Neutral</option>
-          <option value="7" selected>Lawful Evil</option>
-          <option value="8" selected>Neutral Evil</option>
-          <option value="9" selected>Chaotic Evil</option>
-        </select>
-
-        <label for="bio">Character Bio: </label>
-        <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
-      </div>
-      <div class="thirdData">
+      <div class="bottomOptions">
         <div class="l">
-          <p>Inventory</p>
+          <input type="button" value="Log Out" onClick="location.href='LoginScreen.html'"></button>
         </div>
         <div class="r">
-          <p>Attributes</p>
+          <input type="button" value="Roll a Die" onClick="location.href='DiceRoll.html'"></button>
         </div>
       </div>
-      <div class="fourthData">
-        <div class="l">
-          <textarea id="inventory" name="inventory" rows="8" cols="50"></textarea>
+    </div>
+
+    <div class="split right">
+      <form method="post" action="http://localhost:3000/character">
+        <div class="characterTop">
+          <input type="text" placeholder="Enter your character name" name="characterName">
         </div>
-        <div class="r">
-          <div class="att">
-            <div class="l">
-              <label for="strength">Strength</label> <br>
-              <label for="dexterity">Dexterity</label> <br>
-              <label for="constitution">Constitution</label> <br>
-              <label for="intelligence">Intelligence</label> <br>
-              <label for="wisdom">Wisdom</label> <br>
-              <label for="charisma">Charisma</label> <br>
-            </div>
-            <div class="r">
-              <input type="number" id="strength" name="strength"> <br>
-              <input type="number" id="dexterity" name="dexterity"> <br>
-              <input type="number" id="constitution" name="constitution"> <br>
-              <input type="number" id="intelligence" name="intelligence"> <br>
-              <input type="number" id="wisdom" name="wisdom"> <br>
-              <input type="number" id="charisma" name="charisma"> <br>
+        <div class="basicData">
+          <label for="level">Level: </label>
+          <input type="number" id="level" name="level">
+
+          <label for="cRaces">Race: </label>
+          <select name="cRaces" multiple>
+            <option value="1" selected>Human</option>
+            <option value="2">Dragonborn</option>
+            <option value="3">Dwarf</option>
+            <option value="4">Elf</option>
+            <option value="5">Gnome</option>
+            <option value="6">Half-Elf</option>
+            <option value="7">Halfling</option>
+            <option value="8">Half-Orc</option>
+            <option value="9">Tiefling</option>
+          </select>
+
+          <label for="class">Class: </label>
+          <select name="class" multiple>
+            <option value="1" selected>Fighter</option>
+            <option value="2">Barbarian</option>
+            <option value="3">Bard</option>
+            <option value="4">Cleric</option>
+            <option value="5">Druid</option>
+            <option value="6">Monk</option>
+            <option value="7">Paladin</option>
+            <option value="8">Ranger</option>
+            <option value="9">Rogue</option>
+            <option value="10">Sorcerer</option>
+            <option value="11">Warlock</option>
+            <option value="12">Wizard</option>
+            <option value="13">Artificer</option>
+            <option value="14">Homebrew</option>
+          </select>
+        </div>
+        <div class="secondDataRow">
+          <label for="alignment">Alignment: </label>
+          <select name="alignment" multiple>
+            <option value="1" selected>Lawful Good</option>
+            <option value="2" selected>Neutral Good</option>
+            <option value="3" selected>Chaotic Good</option>
+            <option value="4" selected>Lawful Neutral</option>
+            <option value="5" selected>True Neutral</option>
+            <option value="6" selected>Chaotic Neutral</option>
+            <option value="7" selected>Lawful Evil</option>
+            <option value="8" selected>Neutral Evil</option>
+            <option value="9" selected>Chaotic Evil</option>
+          </select>
+
+          <label for="bio">Character Bio: </label>
+          <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
+        </div>
+        <div class="thirdData">
+          <div class="l">
+            <p>Inventory</p>
+          </div>
+          <div class="r">
+            <p>Attributes</p>
+          </div>
+        </div>
+        <div class="fourthData">
+          <div class="l">
+            <textarea id="inventory" name="inventory" rows="8" cols="50"></textarea>
+          </div>
+          <div class="r">
+            <div class="att">
+              <div class="l">
+                <label for="strength">Strength</label> <br>
+                <label for="dexterity">Dexterity</label> <br>
+                <label for="constitution">Constitution</label> <br>
+                <label for="intelligence">Intelligence</label> <br>
+                <label for="wisdom">Wisdom</label> <br>
+                <label for="charisma">Charisma</label> <br>
+              </div>
+              <div class="r">
+                <input type="number" id="strength" name="strength"> <br>
+                <input type="number" id="dexterity" name="dexterity"> <br>
+                <input type="number" id="constitution" name="constitution"> <br>
+                <input type="number" id="intelligence" name="intelligence"> <br>
+                <input type="number" id="wisdom" name="wisdom"> <br>
+                <input type="number" id="charisma" name="charisma"> <br>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="fifthData">
-        <div class="l">
-          <label for="healthDamage">Health & Damage</label> <br>
+        <div class="fifthData">
+          <div class="l">
+            <label for="healthDamage">Health & Damage</label> <br>
+          </div>
+          <div class="r">
+            <label for="skills">Skills</label> <br>
+          </div>
         </div>
-        <div class="r">
-          <label for="skills">Skills</label> <br>
+        <div class="sixthData">
+          <div class="l">
+            <textarea id="healthDamage" name="healthDamage" rows="10" cols="50"></textarea>
+          </div>
+          <div class="r">
+            <textarea id="skills" name="skills" rows="10" cols="50"></textarea>
+          </div>
         </div>
-      </div>
-      <div class="sixthData">
-        <div class="l">
-          <textarea id="healthDamage" name="healthDamage" rows="10" cols="50"></textarea>
-        </div>
-        <div class="r">
-          <textarea id="skills" name="skills" rows="10" cols="50"></textarea>
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
-</div>
 </body>
+
 </html>
