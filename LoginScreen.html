@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link href="LoginScreen.css" rel="stylesheet">
-    <script src="LoginScreen.js"></script>
-</head>
+    <link href="LoginScreen.css" rel="stylesheet"></head>
 
 <body>
-    <form method="post" action="http://localhost:3000/accounts"-->
-        <div class="parentContainer">
-            <div class="loginContainer">
-                <label for="userName">Username</label><br>
-                <form name="login">
-                    <input name="userName" type="text" placeholder="Enter Username" required><br>
-                <label for="password">Password</label><br>
-                <input name="password" type="password" placeholder="Enter Password" required><br>
+    <div class="login-page">
+        <div class = "form">
+            <form class = "register-form" id="register-form">
+                <input id="username" type = "text" placeholder = "Username" value=""/>
+                <input id="password" type = "password" placeholder = "Password" value=""/>
+                <input class="button" id="rgstr_btn" type="submit" value="Register" onClick="store()"/>
+                <p class = "message">Already Registered? <a href="#">Login</a></p>
+            </form>
 
-                <div class="buttonContainer">
-                    <input type="button" value="SignUp"
-                    onClick="location.href='Characters.html'"></button>
-
-                    <input type="button" value="Login"
-                    onClick="pasuser(this.form)"></button>
-                </div>
-            </div>
+            <form class = "login-form">
+                <input id="registeredUser" type="text" placeholder="Enter Username" value=""/>
+                <input id="registeredPw" type="password" placeholder="Enter Password" value=""/>
+                <input class="button" id="login_btn" type="submit" value="Login" onClick="check()"/>
+                <p class = "message">Not Registered? 
+                <a href="#">Register</a></p>
+            </form>
         </div>
-    </form>
-    
+    </div>  
+
+    <script type="text/javascript" language="javascript" src="LoginScreen.js"></script>
+
+    <script src= 'https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script> 
+        $('.message a').click(function(){
+        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+        });
+    </script>
+
 </body>
 </html>

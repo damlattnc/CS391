@@ -1,10 +1,22 @@
-function pasuser(form) {
-    if (form.userName.value=="user1") { 
-    if (form.password.value=="password") {              
-    location="Characters.html" 
-    } else {
-    alert("Invalid Password")
+function store() {
+    var name = document.getElementById('username').value;
+    var pw = document.getElementById('password').value;
+    localStorage.setItem('username', name.value);
+    localStorage.setItem('password', pw.value);
+}
+
+function check() {
+
+    var storedName = localStorage.getItem('username').value;
+    var storedPassword = localStorage.getItem('password').value;
+    var userName = document.getElementById('registeredUser').value;
+    var userPassword = document.getElementById('registeredPW').value;
+
+    if(userName.value == storedName && userPassword.value == storedPassword) {
+        alert('You are loged in.');
+        window.location.href = 'Characters.html'
     }
-    } else {  alert("Invalid UserID")
+    else {
+        alert('ERROR.');
     }
-    }
+}
