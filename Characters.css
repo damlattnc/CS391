@@ -37,6 +37,17 @@
 
 textarea {
     resize: none;
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    font-size: 14px;
+    background: #d1974ca1;
+}
+
+.basicData .select{
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    font-size: 14px;
+    background: #d1974ca1;
 }
 
 .thirdData {

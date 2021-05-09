@@ -8,31 +8,14 @@
 <body>
     <div class="login-page">
         <div class = "form">
-            <form class = "register-form" id="register-form">
-                <input id="username" type = "text" placeholder = "Username" value=""/>
-                <input id="password" type = "password" placeholder = "Password" value=""/>
-                <input class="button" id="rgstr_btn" type="submit" value="Register" onClick="store()"/>
-                <p class = "message">Already Registered? <a href="#">Login</a></p>
-            </form>
-
             <form class = "login-form">
-                <input id="registeredUser" type="text" placeholder="Enter Username" value=""/>
-                <input id="registeredPw" type="password" placeholder="Enter Password" value=""/>
-                <input class="button" id="login_btn" type="submit" value="Login" onClick="check()"/>
+                <input id="registeredUser" type="text" placeholder="Enter Username" value="" required/>
+                <input id="registeredPw" type="password" placeholder="Enter Password" value="" required/>
+                <input class="button" id="login_btn" type="submit" value="Login" onClick="login()"/>
                 <p class = "message">Not Registered? 
-                <a href="#">Register</a></p>
+                <a href="RegisterScreen.html">Register</a></p>
             </form>
         </div>
     </div>  
-
-    <script type="text/javascript" language="javascript" src="LoginScreen.js"></script>
-
-    <script src= 'https://code.jquery.com/jquery-3.2.1.min.js'></script>
-    <script> 
-        $('.message a').click(function(){
-        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-        });
-    </script>
-
 </body>
 </html>

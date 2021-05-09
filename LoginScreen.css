@@ -47,11 +47,3 @@ body {
     color:rgb(21, 51, 21);
     font-size: 17px;
 }
-
-.form .message .a{
-    color: rgb(21, 51, 21);
-}
-
-.form .register-form {
-    display: none;
-}
