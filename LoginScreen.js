@@ -5,6 +5,7 @@ function store() {
 
     var name = document.getElementById('username').value;
     var pw = document.getElementById('password').value;
+
     Users.push(name);
     Passwords.push(pw);
 
@@ -22,6 +23,7 @@ function login() {
 
     if(userName == "Admin" && userPassword == "123456"){
         alert ('You are logged in.');
+        window.location.href = 'Characters.html'
     }
     
     else{
