@@ -1,39 +1,30 @@
 function store() {
-    var Users = ["damla", "alanur", "murat"];
-    var Passwords = ["1234", "12345", "abcd"]
-    localStorage.setItem("Users", JSON.stringify(Users))
-
     var name = document.getElementById('username').value;
     var pw = document.getElementById('password').value;
-
-    Users.push(name);
-    Passwords.push(pw);
-
-    alert(name + "  Thanks for registration. \nTry to login Now");
+    localStorage.setItem('username', name.value);
+    localStorage.setItem('password', pw.value);
 }
 
-function login() {
+function login(form) {
 
-    var Users = JSON.parse(localStorage.getItem("Users"));
-    var Passwords = JSON.parse(localStorage.getItem("Passwords"));
-    var userName = document.getElementById('registeredUser');
-    var userPassword = document.getElementById('registeredPw');
+    var storedName = localStorage.getItem('username').value;
+    var storedPassword = localStorage.getItem('password').value;
+    var userName = document.getElementById('registeredUser').value;
+    var userPassword = document.getElementById('registeredPw').value; 
 
-    //admin login
+    if (form.registeredUser.value=="admin") { 
+        if (form.registeredPw.value=="password") {    
+            alert("Logged in as admin.")          
+            location="Characters.html" 
+        } else {
+            alert("Invalid Password")
+        }
+        }
 
-    if(userName == "Admin" && userPassword == "123456"){
-        alert ('You are logged in.');
+    else if(userName.value == storedName && userPassword.value == storedPassword) {
+        alert('You are logged in.');
         window.location.href = 'Characters.html'
     }
-    
-    else{
-
-    for (var i = 0; i < Users.length; i++) {
-    if (userName == Users[i] && userPassword == Passwords[i]) {
-        alert ('You are logged in.');
-        window.location.href = 'Characters.html' 
-        break;
-    }
-    alert('Login unsuccessful.');
-    }
-}}
+    else {
+        alert("Invalid UserID");
+    }}
