@@ -46,3 +46,30 @@
 .main {
     text-align: center;
 }
+
+.button{
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    background: #4caf70;
+    color:black;
+    width: 60px;
+    height: 40px;
+    border: 2;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.result{
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+}
+
+.text{
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color:seagreen;
+}

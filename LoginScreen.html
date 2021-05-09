@@ -3,30 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link href="LoginScreen.css" rel="stylesheet">
+    <link href="LoginScreen.css" rel="stylesheet"></head>
     <script src="LoginScreen.js"></script>
-</head>
 
 <body>
-    <form method="post" action="http://localhost:3000/accounts"-->
-        <div class="parentContainer">
-            <div class="loginContainer">
-                <label for="userName">Username</label><br>
-                <form name="login">
-                    <input name="userName" type="text" placeholder="Enter Username" required><br>
-                <label for="password">Password</label><br>
-                <input name="password" type="password" placeholder="Enter Password" required><br>
-
-                <div class="buttonContainer">
-                    <input type="button" value="SignUp"
-                    onClick="location.href='Characters.html'"></button>
-
-                    <input type="button" value="Login"
-                    onClick="pasuser(this.form)"></button>
-                </div>
-            </div>
+    <div class="login-page">
+        <div class = "form">
+            <form class = "login-form">
+                <input id="registeredUser" type="text" placeholder="Enter Username" value="" required/>
+                <input id="registeredPw" type="password" placeholder="Enter Password" value="" required/>
+                <input class="button" id="login_btn" type="button" value="Login" onClick="login(this.form)"/>
+                <p class = "message">Not Registered? 
+                <a href="RegisterScreen.html">Register</a></p>
+            </form>
         </div>
-    </form>
-    
+    </div>  
 </body>
 </html>

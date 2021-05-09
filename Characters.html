@@ -13,19 +13,23 @@
 <body>
   <div class="main">
     <div class="split left">
+      <div class="footer">
+        <p>Footer</p>
+        <div class="bottomOptions">
+          <div class="buttons">
+            <div class="l">
+              <input type="button" value="Log Out" onClick="location.href='LoginScreen.html'"></button>
+            </div>
+            <div class="r">
+              <input type="button" value="Roll a Die" onClick="location.href='DiceRoll.html'"></button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="chars">
         <input type='file' />
-        <br><img id="myImg" src="#">
-      </div>
-      <div class="bottomOptions">
-        <div class="l">
-          <input type="button" value="Log Out" onClick="location.href='LoginScreen.html'"></button>
-        </div>
-        <div class="r">
-          <input type="button" value="Roll a Die" onClick="location.href='DiceRoll.html'"></button>
-        </div>
-      </div>
-    </div>
+        <br><img id="myImg" src="#" style="width:150px;height:150px;">
+        <img class="top" id="frame" src="frame.png" style="width:160px;height:160px;">
 
     <div class="split right">
       <form method="post" action="http://localhost:3000/character">
