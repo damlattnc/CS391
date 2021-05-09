@@ -26,5 +26,5 @@ function login(form) {
         window.location.href = 'Characters.html'
     }
     else {
-        alert("Invalid UserID");
+        alert("Invalid UserID or Password");
     }}
