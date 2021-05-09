@@ -30,14 +30,14 @@
     <div class="split right">
       <form method="post" action="http://localhost:3000/character">
         <div class="characterTop">
-          <input type="text" placeholder="Enter your character name" name="characterName">
+          <input type="text" id="cName" placeholder="Enter your character name" name="characterName">
         </div>
         <div class="basicData">
           <label for="level">Level: </label>
           <input type="number" id="level" name="level">
 
           <label for="cRaces">Race: </label>
-          <select name="cRaces" multiple>
+          <select name="cRaces" id="cRaces" multiple>
             <option value="1" selected>Human</option>
             <option value="2">Dragonborn</option>
             <option value="3">Dwarf</option>
@@ -50,7 +50,7 @@
           </select>
 
           <label for="class">Class: </label>
-          <select name="class" multiple>
+          <select name="class" id="cClass" multiple>
             <option value="1" selected>Fighter</option>
             <option value="2">Barbarian</option>
             <option value="3">Bard</option>
@@ -69,7 +69,7 @@
         </div>
         <div class="secondDataRow">
           <label for="alignment">Alignment: </label>
-          <select name="alignment" multiple>
+          <select name="alignment" id="cAlignment" multiple>
             <option value="1" selected>Lawful Good</option>
             <option value="2" selected>Neutral Good</option>
             <option value="3" selected>Chaotic Good</option>
@@ -129,7 +129,7 @@
         </div>
         <div class="sixthData">
           <div class="l">
-            <button>Append</button>
+            <button onclick="saveCharData()">Append</button>
           </div>
         </div>
       </form>
